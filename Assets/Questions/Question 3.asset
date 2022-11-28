@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b19b5a64c04534098a236a79c96c33, type: 3}
   m_Name: Question 3
   m_EditorClassIdentifier: 
-  question: "Kt\xF3ra dru\u017Cyna wygra\u0142a Mistrzostwa \u015Awiata (Worldsy)
-    w League of Legends w 2022 roku?"
+  question: Ktora druzyna wygrala Mistrzostwa Swiata (Worldsy) w League of Legends
+    w 2022 roku?
+  answers:
+  - T1
+  - JD Gaming
+  - G2
+  - DRX
+  correctAnswerIndex: 3

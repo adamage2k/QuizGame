@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 4
   m_EditorClassIdentifier: 
   question: Z jakiej postaci najbardziej znany jest streamer Thebausffs?
+  answers:
+  - Quinn
+  - Singed
+  - Sion
+  - Yummi
+  correctAnswerIndex: 2
