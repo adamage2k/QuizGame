@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4b19b5a64c04534098a236a79c96c33, type: 3}
-  m_Name: Question 6
+  m_Name: Question 7
   m_EditorClassIdentifier: 
-  question: Kto jest najprzystojniejszy z grupy XI?
+  question: "Ile HP posiada Baron Nashor, kt\xF3ry pojawia sie na mapie w 20:00?"
   answers:
-  - Xayoo
-  - Vysotzky
-  - Popo
-  - LukiSteve
-  correctAnswerIndex: 3
+  - 13600
+  - 10000
+  - 12600
+  - 15000
+  correctAnswerIndex: 2
+  difficultyLevel: 0

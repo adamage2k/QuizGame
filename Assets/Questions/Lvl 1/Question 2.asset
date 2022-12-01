@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b19b5a64c04534098a236a79c96c33, type: 3}
   m_Name: Question 2
   m_EditorClassIdentifier: 
-  question: Ktory streamer, powrzechnie uznawany jest za wodza klubu "R"?
+  question: "Kt\xF3ry streamer, powrzechnie uznawany jest za wodza klubu \"R\"?"
   answers:
   - Arquel
   - Xayoo
