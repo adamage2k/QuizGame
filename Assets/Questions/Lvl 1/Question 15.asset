@@ -19,4 +19,4 @@ MonoBehaviour:
   - Gnar
   - Irelia
   correctAnswerIndex: 1
-  difficultyLevel: 0
+  difficulty: 1

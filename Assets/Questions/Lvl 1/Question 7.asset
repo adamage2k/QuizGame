@@ -19,4 +19,4 @@ MonoBehaviour:
   - 12600
   - 15000
   correctAnswerIndex: 2
-  difficultyLevel: 0
+  difficulty: 3

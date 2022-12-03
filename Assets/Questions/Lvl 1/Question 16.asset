@@ -19,4 +19,4 @@ MonoBehaviour:
   - 10
   - 25
   correctAnswerIndex: 0
-  difficultyLevel: 0
+  difficulty: 2

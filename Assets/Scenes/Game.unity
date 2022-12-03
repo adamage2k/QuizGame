@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500211844d1dfad4fb8d729fbe64b5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToCompleteQuestion: 15
+  timeToCompleteQuestion: 6
   timeToShowCorrectAnswer: 3
   loadNextQuestion: 1
   isAnsweringQuestion: 0
@@ -437,6 +437,7 @@ MonoBehaviour:
   deafultAnswerSprite: {fileID: 21300000, guid: 70cf713e1991d174185a15d45064dd2f, type: 3}
   correctAnswerSprite: {fileID: 21300000, guid: 4ba73d190be4d0645a699f682fb15820, type: 3}
   timerImage: {fileID: 215754330}
+  scoreText: {fileID: 2131747797}
 --- !u!114 &287432943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +628,7 @@ GameObject:
   - component: {fileID: 542042035}
   - component: {fileID: 542042037}
   - component: {fileID: 542042036}
+  - component: {fileID: 542042038}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -751,6 +753,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542042034}
   m_CullTransparentMesh: 1
+--- !u!114 &542042038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542042034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4adb09a25205f34e903ac6f7853f374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textToAnimate: {fileID: 542042036}
 --- !u!1 &561422824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,10 +1819,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ranga: Grand Master'
+  m_text: "Ranga: \u017Belazo"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0a162461aefeea748885625a7844baf3, type: 2}
+  m_sharedMaterial: {fileID: 8770983771752847674, guid: 0a162461aefeea748885625a7844baf3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

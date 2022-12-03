@@ -11,7 +11,6 @@ public class Quiz : MonoBehaviour
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
     QuestionSO currentQuestion;
-    int questionLevel = 1;
 
     [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
@@ -26,11 +25,16 @@ public class Quiz : MonoBehaviour
     [SerializeField] Image timerImage;
     Timer timer;
 
+    [Header("Scoring")]
+    [SerializeField] TextMeshProUGUI scoreText;
+    ScoreKeeper scoreKeeper;
+
 
 
     void Start()
     {
         timer = FindObjectOfType<Timer>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     void Update()
@@ -41,7 +45,6 @@ public class Quiz : MonoBehaviour
             hasAnsweredEarly = false;
             GetNextQuestion();
             timer.loadNextQuestion = false;
-            questionLevel++;
         }
         else if (!hasAnsweredEarly && !timer.isAnsweringQuestion) 
         {
@@ -54,27 +57,45 @@ public class Quiz : MonoBehaviour
     {
         hasAnsweredEarly = true;
         DisplayAnswer(index);
+        HighLightIncorrectChoice(index);
         SetButtonState(false);
         timer.CancelTimer();
+        scoreText.text = "Ranga: " + scoreKeeper.CalculateDivision();
     }
 
     void DisplayAnswer(int index) 
     {
         Image buttonImage;
+        
 
         if (index == currentQuestion.GetCorrectAnswerIndex())
         {
             questionText.text = "Dobrze!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
+            scoreKeeper.IncrementCorrectAnswers(currentQuestion);
+            Debug.Log(scoreKeeper.GetCorrectAnswers());
+            Debug.Log(currentQuestion.GetDifficulty());
         }
         else
         {
             correctAnswerIndex = currentQuestion.GetCorrectAnswerIndex();
             string correctAnswer = currentQuestion.GetAnswer(correctAnswerIndex);
-            questionText.text = "Haha! Zle xdd Poprawna odpowiedü to:\n" + correctAnswer;
-            buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
-            buttonImage.sprite = correctAnswerSprite;
+            questionText.text = "Zle xdd Poprawna odpowiedü to:\n" + correctAnswer;
+            buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();           
+            buttonImage.sprite = correctAnswerSprite;        
+        }
+    }
+
+    void HighLightIncorrectChoice(int index) 
+    {
+
+        if (index != currentQuestion.GetCorrectAnswerIndex())
+        {
+            Image wrongButtonImage;
+
+            wrongButtonImage = answerButtons[index].GetComponent<Image>();
+            wrongButtonImage.color = Color.red;
         }
     }
 
@@ -131,6 +152,7 @@ public class Quiz : MonoBehaviour
         {
             Image buttonImage = answerButtons[i].GetComponent<Image>();
             buttonImage.sprite = deafultAnswerSprite;
+            buttonImage.color = Color.white;
         }
     }
 }

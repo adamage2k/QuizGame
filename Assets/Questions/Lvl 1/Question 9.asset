@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Question 9
   m_EditorClassIdentifier: 
   question: "Kt\xF3ra posta\u0107 wypowiada s\u0142owa: \"Mo\u017Ce swoim urokiem
-    przemowisz mojemu niemadremu bratu do rozumu Ahri\""
+    przemowisz mojemu niem\u0105dremu bratu do rozumu Ahri\""
   answers:
   - Nasus
   - Renekton
   - Yone
   - Yasuo
   correctAnswerIndex: 2
-  difficultyLevel: 0
+  difficulty: 2

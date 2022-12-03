@@ -19,3 +19,4 @@ MonoBehaviour:
   - Fizz
   - Zoe
   correctAnswerIndex: 3
+  difficulty: 2
