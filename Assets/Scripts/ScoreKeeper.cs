@@ -47,7 +47,7 @@ public class ScoreKeeper : MonoBehaviour
         }
         else if (correctAnswers > 30 && correctAnswers <= 80)
         {
-            divison = "Gold";
+            divison = "Grandmaster";
             return divison;
         }
         else if (correctAnswers > 80 && correctAnswers <= 150)
@@ -67,7 +67,7 @@ public class ScoreKeeper : MonoBehaviour
         }
         else if (correctAnswers > 280 && correctAnswers <= 360) 
         {
-            divison = "Grandmaster";
+            divison = "xxx";
             return divison;
         }
         else

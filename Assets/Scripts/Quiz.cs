@@ -15,7 +15,7 @@ public class Quiz : MonoBehaviour
     [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
     int correctAnswerIndex;
-    bool hasAnsweredEarly;
+    bool hasAnsweredEarly = true;
 
     [Header("Button Colors")]
     [SerializeField] Sprite deafultAnswerSprite;
@@ -31,7 +31,7 @@ public class Quiz : MonoBehaviour
 
 
 
-    void Start()
+    void Awake()
     {
         timer = FindObjectOfType<Timer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
